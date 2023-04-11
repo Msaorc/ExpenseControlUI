@@ -1,3 +1,6 @@
 export interface IToken{
-  access_token: string
+  code: string,
+  message: string,
+  access_token: string,
+  user_id: string
 }
