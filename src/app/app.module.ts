@@ -17,6 +17,7 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PrincipalhomeComponent } from './pages/compartilhado/principalhome/principalhome.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PrincipalhomeComponent } from './pages/compartilhado/principalhome/prin
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
