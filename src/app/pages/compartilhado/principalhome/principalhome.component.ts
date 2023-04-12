@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'expenseUI-principalhome',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./principalhome.component.css']
 })
 export class PrincipalhomeComponent {
-  
+
+  constructor(private usuarioService: UsuarioService){}
+
+  deslogar(){
+    this.usuarioService.deslogar()
+  }
 }

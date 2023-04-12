@@ -18,8 +18,8 @@ export class UsuarioService {
       tap((resposta) => {
         debugger;
         if (resposta.access_token == "" || resposta.access_token == undefined) return;
-        localStorage.setItem('token', Buffer.from(resposta.access_token).toString('base64'));
-        localStorage.setItem('user', Buffer.from(resposta.user_id).toString('base64'));
+        localStorage.setItem('token', resposta.access_token);
+        localStorage.setItem('user', resposta.user_id);
         this.router.navigate(['']);
       })
     )
@@ -33,13 +33,13 @@ export class UsuarioService {
   get obterUsuarioLogado(): string|null {
     let user = localStorage.getItem('user')?.toString
     return localStorage.getItem('user')
-      ? Buffer.from(String(localStorage.getItem('user')), 'base64').toString('binary')
+      ? localStorage.getItem('user')
       : '';
   }
 
   get obterTokenUsuario(): string|null {
     return localStorage.getItem('token')
-      ? Buffer.from(String(localStorage.getItem('token')), 'base64').toString('binary')
+      ? localStorage.getItem('token')
       : null;
   }
 

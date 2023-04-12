@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.usuarioService.logar(usuario).subscribe((response) => {
         if(!response.access_token){
           this.snackBar.open('Falha na autenticação', 'Usuário ou senha incorretos. Error: ' + response.message, {
-            duration: 3000
+            duration: 4000
           });
         }
     })
